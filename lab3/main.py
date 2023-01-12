@@ -5,6 +5,11 @@ n = len(sys.argv)
 
 Request = "http://localhost:8888/" + sys.argv[2] + "?"
 
+for i in range(3, n):
+	Request += sys.argv[i]
+	if i != n-1:
+		Request += "&"
+
 
 response = ""
 if sys.argv[1] == "get":
